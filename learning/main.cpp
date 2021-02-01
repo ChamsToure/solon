@@ -33,4 +33,5 @@ using namespace std;
 int main() {
     std::string file {"test.txt"};
     std::shared_ptr<Deck> firstdeck = std::make_shared<Deck>(file);
+    firstdeck->printDeck();
 }
