@@ -5,33 +5,53 @@
 #include <map>
 #include <fstream>
 #include <iostream>
-//TODO take the code from the main file and construct
-//it into a class named "Deck"
+#include <tuple>
+class Card {
+    public:
+        Card();
+        std::pair<std::string, std::string> info;
+        int reps = 0;
+};
 class Deck{
     public:
         void create_deck(std::string &file);
         Deck(std::string &filename)
             :_filename{filename} {
-                //TODO write a function that read a file and create a deck automatically
+                //a function that read a file and create a deck automatically
                 create_deck(filename);
             }
-        std::map<std::string, std::string> &get_deck () {return _deck;}
-        void printDeck() {
-            //TODO should print every card in the deck
-            for (const auto& [key, value]: _deck) {
-                std::cout << "\n"<<key <<  value << "\n";
-            }
-            }
-        
+        std::vector<Card> &get_deck () {return _deck;}
+        void printDeck(); 
+        void startSession(int limit) { //if one card has reached the limit, it wont be displayed anymore
+            bool sessionEnd = false; //turn true, if the card has reached the limit
+            std::vector<Card>temp_deck = _deck;
+            while(sessionEnd == false) {
+            std::string answer;
+            //TODO Here is somewhere a BUG in the loop
+            for(auto &card: temp_deck) {
+                if( card.reps <= limit ) {
+                    std::cout << card.info.first << "\n 'y' for yes, 'n' for no \n";
+                    std::cin >> answer;
+                    if(answer == "y") {
+                        card.reps+=1;
+                        std::cout << card.reps << "\n";
+                    } else {
+                        std::cout << card.reps << "\n";
+                    }
+                    std::cout << "\n" << card.info.second << "\n\n";
+                } else {
+                    std::cout << "You are done!!!\n";
+                    sessionEnd = true;
+                }
+                
+            }    
+        }
+    }
+            
     private:
-        
-        std::map<std::string, std::string> _deck;
+        std::vector<Card> _deck;
         std::string _filename;
 };
-//TODO turn every question and answer into an card object
 
-
-
-//Card create_card(std::map<std::string, std::vector<std::string>> temp_card);
 
 #endif
