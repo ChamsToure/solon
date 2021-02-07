@@ -1,5 +1,7 @@
 #include "deck.h"
 #include <memory>
+#include <random>
+
 void Deck::create_deck(std::string &file)
 {
     std::ifstream ifs(file);
@@ -22,6 +24,42 @@ void Deck::create_deck(std::string &file)
         }
     }
 };
+
+int generateRandomNumber(const std::vector<Card> &item) {
+    std::random_device random_dev;
+    std::mt19937 gen(random_dev());
+    std::uniform_int_distribution<> distr(0, item.size()-1);    
+    int random_num = distr(gen);
+    return random_num;
+};
+
+void Deck::startSession(int limit) 
+{ //if one card has reached the limit, it wont be displayed anymore
+    std::vector<Card>temp_deck = _deck;
+    std::string delay;
+    std::string answer;
+    while(!temp_deck.empty()) {
+        //Will generate a random number for each iteration in the range of the deck size
+        int randNum = generateRandomNumber(temp_deck);
+        std::cout << "\n" << temp_deck[randNum].getCard().first;
+        std::cout << "\nShow Answer: ";
+        std::cin >> delay;
+        std::cout << "\n" << temp_deck[randNum].getCard().second << "\n";
+        std::cout << "\nCorrect(y), Wrong(n): ";
+        std::cin >> answer;
+        if(answer == "y") {
+            temp_deck[randNum].incrementCorrect();
+            if (temp_deck[randNum].correct == 4){
+                //Get the first element to add the index of the element that has to be removed if it reaches the limit
+                auto it = temp_deck.begin(); 
+                temp_deck.erase(temp_deck.begin() +randNum);
+            }
+        }
+        if (delay == "q")
+            break;
+    }
+    };
+
 
 
 Card::Card() {

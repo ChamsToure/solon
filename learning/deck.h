@@ -6,11 +6,14 @@
 #include <fstream>
 #include <iostream>
 #include <tuple>
+
 class Card {
     public:
         Card();
         std::pair<std::string, std::string> info;
-        int reps = 0;
+        int correct = 0;
+        std::pair<std::string, std::string> &getCard() {return info;}
+        void incrementCorrect() {++correct;}
 };
 class Deck{
     public:
@@ -22,31 +25,7 @@ class Deck{
             }
         std::vector<Card> &get_deck () {return _deck;}
         void printDeck(); 
-        void startSession(int limit) { //if one card has reached the limit, it wont be displayed anymore
-            bool sessionEnd = false; //turn true, if the card has reached the limit
-            std::vector<Card>temp_deck = _deck;
-            while(sessionEnd == false) {
-            std::string answer;
-            //TODO Here is somewhere a BUG in the loop
-            for(auto &card: temp_deck) {
-                if( card.reps <= limit ) {
-                    std::cout << card.info.first << "\n 'y' for yes, 'n' for no \n";
-                    std::cin >> answer;
-                    if(answer == "y") {
-                        card.reps+=1;
-                        std::cout << card.reps << "\n";
-                    } else {
-                        std::cout << card.reps << "\n";
-                    }
-                    std::cout << "\n" << card.info.second << "\n\n";
-                } else {
-                    std::cout << "You are done!!!\n";
-                    sessionEnd = true;
-                }
-                
-            }    
-        }
-    }
+        void startSession(int limit); 
             
     private:
         std::vector<Card> _deck;
