@@ -5,7 +5,10 @@
 #include <fstream>
 #include <algorithm>
 #include <cctype>
-
+/*The searchWord feature only works on windows because of the sehllExecute function
+ * But you can implement it by yourself for macOS or Linux
+ * It basically opens a string in your browser.
+ */
 void searchWord() {
     std::cout << "What are you looking for?\n";
     std::string word, search, base_url2, search2;

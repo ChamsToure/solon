@@ -12,9 +12,9 @@ void Deck::create_deck(std::string &file)
         while(getline(ifs, line)) {
             if (line.back() == '?'){ //Checks the last character of the line 
                 std::shared_ptr<Card> card = std::make_shared<Card>();
-                if(!_deck.empty()) {//to check increment after the first pair was completely added
+                //to check increment after the first pair was completely added
+                if(!_deck.empty())
                     ++counter;
-                }
                 _deck.push_back(*card);
                 _deck[counter].info.first = line;
                 last_question = line;
@@ -22,6 +22,8 @@ void Deck::create_deck(std::string &file)
                 _deck[counter].info.second = _deck[counter].info.second + "\n" + line;
             }
         }
+    } else {
+        std::cerr << "Cannot open the file \n";
     }
 };
 
@@ -32,6 +34,14 @@ int generateRandomNumber(const std::vector<Card> &item) {
     int random_num = distr(gen);
     return random_num;
 };
+
+/*
+ * The startSession method will start a session. The limit parameter sets the goal for correct guesses for each card
+ * It will pick random cards, will wait until you pressed a character to show you the answer
+ * If your guess was correct you shold type 'y' and it will automatically increment the number of correct guesses
+ * If a card has reached the limit of correct guesses, it will be removed from the temporary list
+ * The user can exit if he presses 'q'
+ */
 
 void Deck::startSession(int limit) 
 { //if one card has reached the limit, it wont be displayed anymore
