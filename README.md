@@ -8,7 +8,7 @@ Virtual and Voice Assistant for to improve productivity and learning.
 
 # Requirements
 - If you want to use the search feature and are not on windows,
-you have to change line 21 and 22 in the search.cpp folder because it only
+you have to change line 21 and 22 inside the search.cpp folder because it only
 works on windows.
 
 # Python packages
