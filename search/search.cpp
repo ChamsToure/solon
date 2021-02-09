@@ -18,6 +18,7 @@ void searchWord() {
     search = base_url + word;
     search2 = base_url2 + word;
     checkWord(word);
+    //Only works on windows
     ShellExecute(0, _T("open"), search.c_str(), 0, 0, 0);
     ShellExecute(0, _T("open"), search2.c_str(), 0, 0, 0);
 
