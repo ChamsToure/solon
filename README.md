@@ -1,4 +1,4 @@
-# solon
+# Solon
 Virtual and Voice Assistant for to improve productivity and learning.
 
 # Features
