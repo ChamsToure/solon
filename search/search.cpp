@@ -12,7 +12,7 @@
 void searchWord() {
     std::cout << "What are you looking for?\n";
     std::string word, search, base_url2, search2;
-    std::string base_url = "www.dictionary.com/browse/";
+    const std::string base_url = "www.dictionary.com/browse/";
     base_url2 = "https://en.wikipedia.org/wiki/";
     std::cin >> word;
     search = base_url + word;
@@ -25,7 +25,7 @@ void searchWord() {
 };
 
 void checkWord(const std::string& the_word) {
-    std::ifstream ifs("words.txt");
+    const std::ifstream ifs("words.txt");
     
  
     if(ifs.is_open()) {

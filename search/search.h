@@ -1,9 +1,6 @@
 #ifndef SEARCH_H
 #define SEARCH_H
 
-#include <windows.h>
-#include <shellapi.h>
-#include <tchar.h>
 #include <iostream>
 #include <string>
 void searchWord();

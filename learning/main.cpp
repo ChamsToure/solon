@@ -4,7 +4,6 @@
 #include <vector>
 #include "deck.cpp"
 #include <memory>
-using namespace std;
 
 int main() {
     std::string file {"test.txt"};

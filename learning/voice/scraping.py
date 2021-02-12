@@ -3,7 +3,7 @@ import os
 import time
 import speech_recognition as sr
 import playsound
-
+from commands import *
 from gtts import gTTS
 
 iteration = 0
@@ -39,7 +39,7 @@ elements = soup.select("div")
 
 definitions = []
 
-print(len(elements))
+#print(len(elements))
 #Because each definition is inside a div tag with the "value=[num]" attribute
 #we only have to find these tags and extract the text or information from it.
 for item in elements:
@@ -58,5 +58,5 @@ else:
 #    speak(i, iteration)
 #    iteration +=1
 
-
+search_browser(the_word)
 
