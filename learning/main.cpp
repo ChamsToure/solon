@@ -7,11 +7,7 @@
 #include <string>
 namespace fs = std::filesystem;
 
-void choose_deck() {
-    std::cout << "These are the available decks: \n";
-    for (const auto &entry: fs::directory_iterator("decks/"))
-        std::cout << entry.path().string() << std::endl;
-}
+
 
 int main() {
 

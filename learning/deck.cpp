@@ -82,3 +82,8 @@ void Deck::printDeck() {
     }
 };
 
+void choose_deck() {
+    std::cout << "These are the available decks: \n";
+    for (const auto &entry: std::filesystem::directory_iterator("decks/"))
+        std::cout << entry.path().string() << std::endl;
+};
