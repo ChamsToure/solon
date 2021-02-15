@@ -1,7 +1,7 @@
 #include "deck.h"
 #include <memory>
 #include <random>
-
+#include <filesystem>
 void Deck::create_deck(std::string &file)
 {
     std::ifstream ifs(file);
@@ -81,3 +81,4 @@ void Deck::printDeck() {
         std::cout << card.info.first << " : " << card.info.second << "\n";
     }
 };
+
