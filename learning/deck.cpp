@@ -2,6 +2,8 @@
 #include <memory>
 #include <random>
 #include <filesystem>
+#include <fstream>
+
 void Deck::create_deck(std::string &file)
 {
     std::ifstream ifs(file);
@@ -82,8 +84,24 @@ void Deck::printDeck() {
     }
 };
 
+//TODO
 void choose_deck() {
+    char choice[2];
     std::cout << "These are the available decks: \n";
     for (const auto &entry: std::filesystem::directory_iterator("decks/"))
         std::cout << entry.path().string() << std::endl;
+    std::cout << "Which deck do you want?\n";
+    std::cin >> choice;
 };
+
+void create_new_deck() {
+    const std::string decks_path = "decks/";
+    std::cout << "What is the name of the Deck?" << std::endl;
+    std::string deck_name;
+    std::cin >> deck_name;
+    std::string file = deck_name + ".txt";
+    //TODO Before creating the file, check if its already in the deck
+    std::ofstream filename("decks/" + file);
+    filename.close();
+    
+}
