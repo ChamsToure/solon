@@ -1,8 +1,5 @@
 #include <iostream>
-#include <windows.h>
-#include <shellapi.h>
-#include <tchar.h>
-#include "search.h"
+#include "search/search.h"
 
 using namespace std;
 

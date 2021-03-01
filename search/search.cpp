@@ -1,7 +1,4 @@
 #include "search.h"
-#include <windows.h>
-#include <shellapi.h>
-#include <tchar.h>
 #include <fstream>
 #include <algorithm>
 #include <cctype>
@@ -18,35 +15,35 @@ void searchWord() {
     search = base_url + word;
     search2 = base_url2 + word;
     checkWord(word);
-    //Only works on windows
-    ShellExecute(0, _T("open"), search.c_str(), 0, 0, 0);
-    ShellExecute(0, _T("open"), search2.c_str(), 0, 0, 0);
+    ///Only works on windows
+    //ShellExecute(0, _T("open"), search.c_str(), 0, 0, 0);
+    //ShellExecute(0, _T("open"), search2.c_str(), 0, 0, 0);
 
 };
 
+/*The function only scans whether the searched is already in the file
+ * or not. If it is not, the name of the word will be appended.
+ */
 void checkWord(const std::string& the_word) {
-    const std::ifstream ifs("words.txt");
-    
- 
+    std::string filename = {"search/examples.txt"};
+    std::ifstream ifs(filename); 
     if(ifs.is_open()) {
-        bool isInFile = false;
+        bool isInFile = false; //true if the the word is already in the file
         std::string line;
-        while(getline(ifs, line)) {
+        while(std::getline(ifs, line)) {
             //transform the first charater of the line to lowercase
             std::transform(line.begin(), line.end(),line.begin(), [](unsigned char c)
                     {return std::tolower(c);});
             if (the_word == line){
-                std::cout << "YES IT IS IN FILE\n";
                 isInFile = true;
             }
         }
-        ifs.close();
+        //If the isInFile is not true, it will append the word
         if (!isInFile) {
             std::cout << "It is not in file and will be added!\n";
-            std::ofstream ofs("words.txt",std::ofstream::app);
+            std::ofstream ofs(filename,std::ofstream::app);
             ofs << the_word << std::endl;
-            ofs.close();
-        } 
-    }
-    
-};
+            ofs.close(); 
+        }
+    } ifs.close();
+}

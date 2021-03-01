@@ -7,16 +7,28 @@
 #include <string>
 namespace fs = std::filesystem;
 
+//TODO UNFINISHED finish the main menu function
+void menu() {
+    std::vector<std::string> choices = {
+        "Choose a Deck\n",
+        "Create a new Deck\n",
+        "Display all Decks\n",
+    };
+    int choice;
+    std::cout << "What do you want to do? \n\n";
+    std::cin >> choice;
+   /* switch(choice){
+        case 1: std::string deck = choose_deck();
+        case 2: create_new_deck();
+        default: std::cout << "Pick Again!\n";
+    }*/
+};
 
 
 int main() {
-    create_new_deck(); 
-    std::string path_to = "decks/";
-    //for (const auto  entry: fs::directory_iterator(path_to))
-    //    std::cout << entry.path().string()<< "\n";
-    std::string file {"decks/physics.txt"};
+//    menu();
+    std::string deck = choose_deck();
+    std::string file {deck};
     std::shared_ptr<Deck> firstdeck = std::make_shared<Deck>(file);
-    //firstdeck->printDeck();
-    //firstdeck->startSession(4);
-    
+    firstdeck->startSession(2);
 }
