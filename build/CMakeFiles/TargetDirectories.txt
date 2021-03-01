@@ -1,0 +1,3 @@
+/home/archrunner/code/solon/build/CMakeFiles/rebuild_cache.dir
+/home/archrunner/code/solon/build/CMakeFiles/solon.dir
+/home/archrunner/code/solon/build/CMakeFiles/edit_cache.dir

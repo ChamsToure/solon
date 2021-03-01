@@ -2,6 +2,7 @@
 #include <fstream>
 #include <algorithm>
 #include <cctype>
+#include <iostream>
 /*The searchWord feature only works on windows because of the sehllExecute function
  * But you can implement it by yourself for macOS or Linux
  * It basically opens a string in your browser.
@@ -25,8 +26,8 @@ void searchWord() {
  * or not. If it is not, the name of the word will be appended.
  */
 void checkWord(const std::string& the_word) {
-    std::string filename = {"search/examples.txt"};
-    std::ifstream ifs(filename); 
+    std::string filepath = {"../search/examples.txt"};
+    std::ifstream ifs(filepath); 
     if(ifs.is_open()) {
         bool isInFile = false; //true if the the word is already in the file
         std::string line;
@@ -41,9 +42,12 @@ void checkWord(const std::string& the_word) {
         //If the isInFile is not true, it will append the word
         if (!isInFile) {
             std::cout << "It is not in file and will be added!\n";
-            std::ofstream ofs(filename,std::ofstream::app);
+            std::ofstream ofs(filepath,std::ofstream::app);
             ofs << the_word << std::endl;
             ofs.close(); 
         }
-    } ifs.close();
+        ifs.close();
+    } else {
+        std::cerr << "Cannot open the file" << std::endl;
+    }
 }

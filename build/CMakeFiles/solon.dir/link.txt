@@ -1,0 +1,1 @@
+/usr/bin/clang++ CMakeFiles/solon.dir/main.cpp.o CMakeFiles/solon.dir/search/search.cpp.o -o solon 
