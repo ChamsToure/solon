@@ -5,17 +5,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/archrunner/code/solon/main.cpp" "/home/archrunner/code/solon/build/CMakeFiles/solon.dir/main.cpp.o"
-  "/home/archrunner/code/solon/search/search.cpp" "/home/archrunner/code/solon/build/CMakeFiles/solon.dir/search/search.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../search"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/archrunner/code/solon/build/decks/CMakeFiles/decks.dir/DependInfo.cmake"
+  "/home/archrunner/code/solon/build/search/CMakeFiles/search.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

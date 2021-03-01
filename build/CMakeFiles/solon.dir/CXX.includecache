@@ -6,17 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/archrunner/code/solon/search/search.cpp
-search.h
-/home/archrunner/code/solon/search/search.h
+/home/archrunner/code/solon/decks/deck.h
+vector
+-
 fstream
--
-algorithm
--
-cctype
 -
 iostream
 -
+tuple
+-
+
+/home/archrunner/code/solon/main.cpp
+filesystem
+-
+iostream
+-
+map
+-
+vector
+-
+memory
+-
+string
+-
+decks/deck.h
+/home/archrunner/code/solon/decks/deck.h
+search/search.h
+/home/archrunner/code/solon/search/search.h
 
 /home/archrunner/code/solon/search/search.h
 iostream

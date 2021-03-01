@@ -142,6 +142,32 @@ solon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solon.dir/build.make CMakeFiles/solon.dir/build
 .PHONY : solon/fast
 
+#=============================================================================
+# Target rules for targets named decks
+
+# Build rule for target.
+decks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 decks
+.PHONY : decks
+
+# fast build rule for target.
+decks/fast:
+	$(MAKE) $(MAKESILENT) -f decks/CMakeFiles/decks.dir/build.make decks/CMakeFiles/decks.dir/build
+.PHONY : decks/fast
+
+#=============================================================================
+# Target rules for targets named search
+
+# Build rule for target.
+search: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 search
+.PHONY : search
+
+# fast build rule for target.
+search/fast:
+	$(MAKE) $(MAKESILENT) -f search/CMakeFiles/search.dir/build.make search/CMakeFiles/search.dir/build
+.PHONY : search/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -169,33 +195,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solon.dir/build.make CMakeFiles/solon.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-search/search.o: search/search.cpp.o
-
-.PHONY : search/search.o
-
-# target to build an object file
-search/search.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solon.dir/build.make CMakeFiles/solon.dir/search/search.cpp.o
-.PHONY : search/search.cpp.o
-
-search/search.i: search/search.cpp.i
-
-.PHONY : search/search.i
-
-# target to preprocess a source file
-search/search.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solon.dir/build.make CMakeFiles/solon.dir/search/search.cpp.i
-.PHONY : search/search.cpp.i
-
-search/search.s: search/search.cpp.s
-
-.PHONY : search/search.s
-
-# target to generate assembly for a file
-search/search.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solon.dir/build.make CMakeFiles/solon.dir/search/search.cpp.s
-.PHONY : search/search.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -204,13 +203,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... decks"
+	@echo "... search"
 	@echo "... solon"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... search/search.o"
-	@echo "... search/search.i"
-	@echo "... search/search.s"
 .PHONY : help
 
 

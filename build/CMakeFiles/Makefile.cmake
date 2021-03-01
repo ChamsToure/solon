@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.19.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.19.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.19.6/CMakeSystem.cmake"
+  "../decks/CMakeLists.txt"
+  "../search/CMakeLists.txt"
   "/var/lib/snapd/snap/cmake/805/share/cmake-3.19/Modules/CMakeCInformation.cmake"
   "/var/lib/snapd/snap/cmake/805/share/cmake-3.19/Modules/CMakeCXXInformation.cmake"
   "/var/lib/snapd/snap/cmake/805/share/cmake-3.19/Modules/CMakeCommonLanguageInclude.cmake"
@@ -41,9 +43,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "decks/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "search/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/solon.dir/DependInfo.cmake"
+  "decks/CMakeFiles/decks.dir/DependInfo.cmake"
+  "search/CMakeFiles/search.dir/DependInfo.cmake"
   )

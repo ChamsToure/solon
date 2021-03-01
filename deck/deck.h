@@ -35,5 +35,6 @@ class Deck{
         std::string _filename;
 };
 
+std::string choose_deck();
 
 #endif

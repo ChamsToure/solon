@@ -103,7 +103,7 @@ std::string choose_deck() {
     int choice, indexNum = 0;
     std::cout << "These are the available decks: \n";
     //Displays all the available decks
-    for (const auto &entry: std::filesystem::directory_iterator("decks/")){
+    for (const auto &entry: std::filesystem::directory_iterator("../examples/decks/")){
         entries.push_back(entry);
         std::cout << indexNum << ") " << entry.path().filename().string() << std::endl;
         ++indexNum;
@@ -127,7 +127,7 @@ void create_new_deck() {
     std::cin >> deck_name;
     std::string file = deck_name + ".txt";
     //Before creating the file, check if its already in the deck
-    for (const auto &entry: std::filesystem::directory_iterator("decks/")){
+    for (const auto &entry: std::filesystem::directory_iterator("../examples/decks/")){
         if ((decks_dir+file) == entry.path().string())
             exists = true;
     }

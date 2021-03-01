@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdecks.a CMakeFiles/decks.dir/deck.cpp.o
+/usr/bin/ranlib libdecks.a
