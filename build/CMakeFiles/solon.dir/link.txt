@@ -1,1 +1,0 @@
-/usr/bin/clang++ CMakeFiles/solon.dir/main.cpp.o -o solon  decks/libdecks.a search/libsearch.a 
