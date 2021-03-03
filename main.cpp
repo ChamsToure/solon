@@ -4,7 +4,8 @@
 #include <vector>
 #include <memory>
 #include <string>
-#include "decks/deck.h"
+#include <stdlib.h>
+#include "deck/deck.h"
 #include "search/search.h"
 namespace fs = std::filesystem;
 
@@ -28,6 +29,10 @@ void menu() {
 
 int main() {
 //    menu();
+    searchWord();
+    //std::string url = {"https://www.google.com/"};
+    //system("google-chrome-stable -new-tab https://www.google.com");
+    //system(std::string("start " + url).c_str());
     std::string the_deck = choose_deck();
     std::string file {the_deck};
     std::shared_ptr<Deck> firstdeck = std::make_shared<Deck>(file);

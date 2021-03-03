@@ -3,7 +3,8 @@
 #include <algorithm>
 #include <cctype>
 #include <iostream>
-/*The searchWord feature only works on windows because of the sehllExecute function
+#include <stdlib.h>
+/*The searchWord feature only works on windows because of the shellExecute function
  * But you can implement it by yourself for macOS or Linux
  * It basically opens a string in your browser.
  */
@@ -15,8 +16,11 @@ void searchWord() {
     std::cin >> word;
     search = base_url + word;
     search2 = base_url2 + word;
-//    checkWord(word);
-    ///Only works on windows
+    /*change chromium to your default browser*/
+    system(("chromium -new-tab " + search2).c_str());
+    checkWord(word);
+    /*If you are using this on Windows you should uncomment the ShellExecute function
+     */
     //ShellExecute(0, _T("open"), search.c_str(), 0, 0, 0);
     //ShellExecute(0, _T("open"), search2.c_str(), 0, 0, 0);
 
@@ -26,7 +30,7 @@ void searchWord() {
  * or not. If it is not, the name of the word will be appended.
  */
 void checkWord(const std::string& the_word) {
-    std::string filepath = {"../search/examples.txt"};
+    std::string filepath = {"../search/history.txt"}; //Saves all the searched words
     std::ifstream ifs(filepath); 
     if(ifs.is_open()) {
         bool isInFile = false; //true if the the word is already in the file

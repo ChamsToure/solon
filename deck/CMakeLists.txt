@@ -1,1 +1,1 @@
-add_library(decks deck.cpp)
+add_library(deck deck.cpp)
