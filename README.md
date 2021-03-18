@@ -8,6 +8,8 @@ A Virtual Assistant to improve productivity and learning.
 - create your own decks of flashcards
 - start learning sessions with a goal of correct answers for each card in the choosen deck
 
+![alt text](https://github.com/ChamsToure/solon/blob/master/learn-demo.gif)
+![alt text](https://github.com/ChamsToure/solon/blob/master/search-demo.gif)
 
 
 ## Before building
