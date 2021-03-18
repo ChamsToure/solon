@@ -56,7 +56,3 @@ be easier if you run into issues with the browser set up.
  
  - Uncomment line 42-43 inside the scraping.py file.
  - Every searched keyword is stored in the /files/decks/history.txt file
-<<<<<<< HEAD
-
-=======
->>>>>>> d6919756f1be4397f6705d5e03b9354fb2599b63
