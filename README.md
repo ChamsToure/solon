@@ -8,6 +8,8 @@ A Virtual Assistant to improve productivity and learning.
 - create your own decks of flashcards
 - start learning sessions with a goal of correct answers for each card in the choosen deck
 
+![alt text](https://github.com/ChamsToure/solon/blob/master/learn-demo.gif)
+![alt text](https://github.com/ChamsToure/solon/blob/master/search-demo.gif)
 
 
 ## Before building
@@ -57,7 +59,3 @@ be easier if you run into issues with the browser set up.
  
  - Uncomment line 42-43 inside the scraping.py file.
  - Every searched keyword is stored in the /files/decks/history.txt file
-<<<<<<< HEAD
-
-=======
->>>>>>> d6919756f1be4397f6705d5e03b9354fb2599b63
