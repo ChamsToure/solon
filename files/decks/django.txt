@@ -1,6 +1,0 @@
-What is the common pattern for Templates?
-1. Templates
-2. Views
-3. URLs
-
-
