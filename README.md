@@ -24,6 +24,7 @@ Replace "chromium" with your default browser:
 be easier if you run into issues with the browser set up.
 
 ## How to build
+- The default Compiler on Linux is set to g++. If you use another compiler, change the compiler inside the CMakeLists.txt file.
 - Open your command line
 - cd to project root directory: solon/
 - Create a build directory: mkdir build 

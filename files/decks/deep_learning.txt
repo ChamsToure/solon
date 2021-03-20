@@ -1,0 +1,28 @@
+What is the baseline ?
+- A simple model that you are confident should perform reasonably well. 
+
+Why is it important to start with a baseline?
+- Without starting with a sensible baseline ,it will be difficult to know whether your fancy models are any good.
+
+What are the two main ways data scientists are measuring distances?
+- mean absolute difference, also called L1 norm
+- Root mean squared error (RMSE) or L2 norm
+
+What are two important points of broadcasting in PyTorch?
+- PyTorch doesn’t actually copy mean3 1,010 times. It pretends it were a
+tensor of that shape, but doesn’t allocate any additional memory.
+- It does the whole calculation in C (or, if you’re using a GPU, in CUDA, the
+equivalent of C on the GPU), tens of thousands of times faster than pure
+Python (up to millions of times faster on a GPU!). 
+
+What is a Perceptron? 
+
+What is a nonlinear Activation function?
+
+# The Process of developing Neural Networks
+1. Initialize: Random Values as Parameters
+2. Loss: Testing the effectiveness of the current weights
+3. Step: increase or decrease the weights
+4. Stop
+
+

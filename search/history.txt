@@ -4,3 +4,4 @@ instrumentalism
 relativism
 fallibilism
 theory
+occams-razor

@@ -1,13 +1,3 @@
-
-
-# theory-laden
-- (of an expression) capable of being understood only within the context of a specific theory, as for example superego, which requires the apparatus of Freudian theory in explanation
-
-
-# theory-laden
-- (of an expression) capable of being understood only within the context of a specific theory, as for example superego, which requires the apparatus of Freudian theory in explanation
-
-
 # instrumentalism
 - the variety of pragmatism developed by John Dewey, maintaining that the truth of an idea is determined by its success in the active solution of a problem and that the value of ideas is determined by their function in human experience.
 - a system of pragmatic philosophy holding that ideas are instruments, that they should guide our actions and can change the world, and that their value consists not in their truth but in their success
@@ -34,3 +24,12 @@
 - an ideal or hypothetical situation (esp in the phrase in theory)
 - a set of hypotheses related by logical or mathematical arguments to explain and predict a wide variety of connected phenomena in general termsthe theory of relativity
 - a nontechnical name for hypothesis (def. 1)
+
+
+# theory-laden
+- (of an expression) capable of being understood only within the context of a specific theory, as for example superego, which requires the apparatus of Freudian theory in explanation
+
+
+# occam's razor
+- the maxim that assumptions introduced to explain a thing must not be multiplied beyond necessity.
+- a variant spelling of Ockham's razor
